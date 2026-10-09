@@ -54,7 +54,7 @@ if (code) document.getElementById("code").textContent = code;
 document.getElementById("open").href = code ? `deskbuddy://add/${code}` : "deskbuddy://";
 document.getElementById("go").onclick = async () => {
   if (code) { try { await navigator.clipboard.writeText(`데스크 버디 초대 코드 ${code}`); } catch (e) {} document.getElementById("done").style.display = "block"; }
-  if (drive) location.href = `https://drive.google.com/uc?export=download&id=${drive}`;
+  if (drive) location.href = `https://drive.usercontent.google.com/download?id=${drive}&export=download&confirm=t`;
 };
 </script>
 </body>
